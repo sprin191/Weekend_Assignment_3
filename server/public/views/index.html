@@ -2,31 +2,41 @@
 <html>
 <head>
   <title>Weekend Assignment 3</title>
+  <link rel="stylesheet" href="/vendor/bootstrap.min.css" />
   <link rel="stylesheet" href="/styles/stylesheet.css" />
   <script type="text/javascript" src="/vendor/jquery.min.js"></script>
   <script type="text/javascript" src="/scripts/clientapp.js"></script>
 </head>
   <body>
-    <h1>Weekend Assignment 3</h1>
-    <div class = "display">
-    </div>
-    <div>
-      <form id="inputForm">
-        <label for="num1">Value 1:</label>
-        <input type="number" id="num1" name="num1" />
-
-        <label for="num2">Value 2:</label>
-        <input type="number" id="num2" name="num2" />
-
-        <button type="button" class="operator" data-operator="+">+</button>
-        <button type="button" class="operator" data-operator="-">-</button>
-        <button type="button" class="operator" data-operator="*">*</button>
-        <button type="button" class="operator" data-operator="/">/</button>
-
-        <button type="button" class="clear">Clear</button>
-
-        <button id="equals">=</button>
-      </form>
+    <div class="container">
+      <h1>Calculator</h1>
+      <div class="tab row">
+        <div class = "display col-md-3">
+        </div>
+      </div>
+      <div class = "calculator">
+        <div class = "col-md-3">
+          <button class="number" data-number="1">1</button>
+          <button class="number" data-number="2">2</button>
+          <button class="number" data-number="3">3</button>
+          <button class="operator" data-operator="addition">+</button>
+          <button class="number" data-number="4">4</button>
+          <button class="number" data-number="5">5</button>
+          <button class="number" data-number="6">6</button>
+          <button class="operator" data-operator="subtraction">-</button>
+          <button class="number" data-number="7">7</button>
+          <button class="number" data-number="8">8</button>
+          <button class="number" data-number="9">9</button>
+          <button class="operator" data-operator="multiplication">*</button>
+          <button class="number" data-number="0">0</button>
+          <button class="decimal" data-decimal=".">.</button>
+          <button class="clear">Clear</button>
+          <button class="operator" data-operator="division">/</button>
+        </div>
+        <div class = "col-md-12">
+          <button class="equals">=</button>
+        </div>
+      </div>
     </div>
   </body>
 </html>

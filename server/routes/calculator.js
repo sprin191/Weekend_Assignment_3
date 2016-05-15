@@ -3,28 +3,27 @@ var router = express.Router();
 var answer;
 var numHolder;
 
-router.post('/', function(req, res) {
+router.post('/addition', function(req, res) {
   numHolder = req.body;
-  console.log(numHolder.x);
-  console.log(numHolder.y);
-  console.log(numHolder.type);
-  switch(numHolder.type){
-    case '+':
-    answer = Number(numHolder.x) + Number(numHolder.y);
-    break;
-    case '-':
-    answer = Number(numHolder.x) - Number(numHolder.y);
-    break;
-    case '*':
-    answer = Number(numHolder.x) * Number(numHolder.y);
-    break;
-    case '/':
-    answer = Number(numHolder.x) / Number(numHolder.y);
-    break;
-    default:
-    alert("Something went horribly wrong!");
-  }
-console.log(answer);
+  answer = Number(numHolder.x) + Number(numHolder.y);
+  res.send(answer.toString());
+});
+
+router.post('/subtraction', function(req, res) {
+  numHolder = req.body;
+  answer = Number(numHolder.x) - Number(numHolder.y);
+  res.send(answer.toString());
+});
+
+router.post('/multiplication', function(req, res) {
+  numHolder = req.body;
+  answer = Number(numHolder.x) * Number(numHolder.y);
+  res.send(answer.toString());
+});
+
+router.post('/division', function(req, res) {
+  numHolder = req.body;
+  answer = Number(numHolder.x) / Number(numHolder.y);
   res.send(answer.toString());
 });
 
